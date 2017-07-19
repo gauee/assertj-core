@@ -27,6 +27,10 @@ public class AbstractSoftAssertions {
     proxies = new SoftProxies();
   }
 
+  public AbstractSoftAssertions(ErrorCollector collector) {
+    proxies = new SoftProxies(collector);
+  }
+
   public <T, V> V proxy(Class<V> assertClass, Class<T> actualClass, T actual) {
     return proxies.create(assertClass, actualClass, actual);
   }

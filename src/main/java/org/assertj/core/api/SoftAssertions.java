@@ -122,6 +122,13 @@ import java.util.function.Consumer;
  */
 public class SoftAssertions extends AbstractStandardSoftAssertions {
 
+  public SoftAssertions() {
+  }
+
+  public SoftAssertions(ErrorCollector collector) {
+    super(collector);
+  }
+
   /**
    * Verifies that no proxied assertion methods have failed.
    *

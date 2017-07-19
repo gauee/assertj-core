@@ -36,6 +36,13 @@ import org.assertj.core.util.CheckReturnValue;
 
 public abstract class AbstractStandardSoftAssertions extends Java6AbstractStandardSoftAssertions {
 
+  public AbstractStandardSoftAssertions() {
+  }
+
+  public AbstractStandardSoftAssertions(ErrorCollector collector) {
+    super(collector);
+  }
+
   /**
    * Creates a new, proxied instance of a {@link PathAssert}
    *

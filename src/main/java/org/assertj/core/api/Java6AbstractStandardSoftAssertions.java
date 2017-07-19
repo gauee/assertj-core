@@ -49,6 +49,14 @@ import org.assertj.core.util.CheckReturnValue;
  * @since 2.5.0 / 3.5.0
  */
 public class Java6AbstractStandardSoftAssertions extends AbstractSoftAssertions {
+
+  public Java6AbstractStandardSoftAssertions() {
+  }
+
+  public Java6AbstractStandardSoftAssertions(ErrorCollector collector) {
+    super(collector);
+  }
+
   /**
    * Creates a new instance of <code>{@link BigDecimalAssert}</code>.
    *

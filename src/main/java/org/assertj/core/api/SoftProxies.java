@@ -23,7 +23,15 @@ import net.sf.cglib.proxy.Enhancer;
 
 class SoftProxies {
 
-  private final ErrorCollector collector = new ErrorCollector();
+  private final ErrorCollector collector;
+
+  public SoftProxies() {
+    this(new ErrorCollector());
+  }
+
+  public SoftProxies(ErrorCollector collector) {
+    this.collector = collector;
+  }
 
   void collectError(Throwable error) {
     collector.addError(error);
